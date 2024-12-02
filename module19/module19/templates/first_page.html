@@ -1,0 +1,13 @@
+{% extends 'index1.html' %}
+
+{% block title %}Магазин{% endblock %}
+{% block pagename %}Магазин{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for game in Games %}
+            <li>{{ game.title }} | {{ game.description }} | Цена: {{ game.cost }}<button>Купить</button></li>
+        {% endfor %}
+    </ul>
+    <a href="/"><button>Вернуться обратно</button></a>
+{% endblock %}
